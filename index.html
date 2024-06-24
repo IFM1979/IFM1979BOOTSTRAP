@@ -1,161 +1,319 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-          integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-          crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="styles.css">
     <title>IG Bootstrap</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-  <div class="container-fluid">
-    <div class="nav text-bg-light p-3 justify-content-between">
-        <div class="logo d-inline-flex p-2">
-            <i class="fa-brands fa-instagram fs-3"></i>
-            <h1 class="fs-5 ms-1">Instagram</h1>
-        </div>
-          <div>
-              <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                  Create a new post
-              </button>
-              <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
-                  tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                  <div class="modal-dialog">
-                      <div class="modal-content">
-                          <div class="modal-header">
-                              <h1 class="modal-title fs-5" id="staticBackdropLabel">Create a new post</h1>
-                              <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                  aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-                              <form>
-                                  <div class="mb-3">
-                                      <label for="message-text" class="col-form-label">Caption:</label>
-                                      <textarea class="form-control" id="message-text"
-                                          placeholder="Add the caption of your post here"></textarea>
-                                  </div>
-                                  <div class="pt-2">
-                                      <button type="button" class="btn btn-light"><i
-                                              class="fa-solid fa-camera"></i></button>
+    <div class="container-fluid">
+        <nav class="navbar bg-body-tertiary p-3 justify-content-between">
+            <a class="navbar-brand" href="#">
+                <i class="fa-brands fa-instagram"></i>
+                Instagram
+            </a>
+            <div>
+                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    Create a new post
+                </button>
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Create a new post</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="message-text" class="col-form-label">Caption:</label>
+                                        <textarea class="form-control" id="message-text"
+                                            placeholder="Add the caption of your post here"></textarea>
+                                    </div>
+                                    <div class="pt-2">
+                                        <button type="button" class="btn btn-light"><i
+                                                class="fa-solid fa-camera"></i></button>
 
-                                      <button type="button" class="btn btn-light"><i
-                                              class="fa-solid fa-location-dot"></i></button>
+                                        <button type="button" class="btn btn-light"><i
+                                                class="fa-solid fa-location-dot"></i></button>
 
-                                  </div>
-                              </form>
-                          </div>
+                                    </div>
+                                </form>
+                            </div>
 
 
-                          <div class="modal-footer">
-                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                              <button type="button" class="btn btn-success">Publish</button>
-                          </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-success">Publish</button>
+                            </div>
 
-                      </div>
+                        </div>
 
-                  </div>
+                    </div>
 
-              </div>
-              <div class="btn-group">
-                  <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
-                      aria-expanded="false">
-                      <i class="fa-solid fa-gear"></i>
-                  </button>
-                  <ul class="dropdown-menu dropdown-menu-end">
-                      <li><button class="dropdown-item" type="button">Profile</button></li>
-                      <li><button class="dropdown-item" type="button">Accesibility</button></li>
-                      <li><button class="dropdown-item" type="button">Privacy and data</button></li>
-                      <li>
-                          <hr class="dropdown-divider">
-                      </li>
-                      <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
-                  </ul>
-              </div>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <i class="fa-solid fa-gear"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><button class="dropdown-item" type="button">Profile</button></li>
+                        <li><button class="dropdown-item" type="button">Accesibility</button></li>
+                        <li><button class="dropdown-item" type="button">Privacy and data</button></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+                    </ul>
+                </div>
 
-          </div>
+            </div>
 
-      </nav>
-  </div>
-
-  <div class="gap-3">
-    <div class="d-flex p-2 justify-content-center">
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
-            <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane"
-                    type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true"><i
-                        class="fa-solid fa-table-cells"></i></button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane"
-                    type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false"><i
-                        class="fa-solid fa-square"></i></button>
-            </li>
-        </ul>
+        </nav>
     </div>
 
-        
-    <div class="tab-content" id="myTabContent">
 
-      <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
-          tabindex="0">
-          <div class="container">
-              <div class="d-flex justify-content-center">
-                  <div class="row">
-            
-                        <div class="container">
-                          <div class="row">
-                            <div class="col">
-                              <img src="https://images.unsplash.com/photo-1718571702272-1b0f9009d97c?q=80&w=4587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Flamenco" class="img-fluid" style="width: 100%; height: 300px; object-fit: cover;">
-                            </div>
-                            <div class="col">
-                              <img src="https://images.unsplash.com/photo-1718787505043-670b9b691d05?q=80&w=4587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Coches" class="img-fluid" style="width: 100%; height: 300px; object-fit: cover;">
-                            </div>
-                            <div class="col">
-                              <img src=https://images.unsplash.com/photo-1718545817346-ee8056309909?q=80&w=4746&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D alt="Globos" class="img-fluid" style="width: 100%; height: 300px; object-fit: cover;">
-                            </div>
-              
-                            <div class="container">
-                              <div class="row mt-4">
-                                <div class="col">
-                                  <img src=https://images.unsplash.com/photo-1718807384827-bf59c4935ee1?q=80&w=4160&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D alt="Faro" class="img-fluid" style="width: 100%; height: 300px; object-fit: cover;">
+
+
+
+
+
+    <div class="gap-3">
+        <div class="d-flex p-2 justify-content-center">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link border-0 text-dark" id="home-tab" data-bs-toggle="tab"
+                        data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane"
+                        aria-selected="true"><i class="fa-solid fa-table-cells"></i></button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link border-0 text-dark" id="profile-tab" data-bs-toggle="tab"
+                        data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane"
+                        aria-selected="false"><i class="fa-solid fa-square"></i></button>
+                </li>
+            </ul>
+        </div>
+
+
+
+
+
+
+
+
+
+        <div class="tab-content" id="myTabContent">
+
+            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+                tabindex="0">
+                <div class="container-fluid">
+                    <div class="container text-center">
+                        <div class="row">
+                            <div class="col p-2">
+                                <div class="ratio ratio-1x1">
+                                    <img src="https://images.unsplash.com/photo-1718571702272-1b0f9009d97c?q=80&w=4587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                        alt="Flamenco" class="img-fluid">
                                 </div>
-                                <div class="col">
-                                  <img src=https://images.unsplash.com/photo-1718031024945-79ad9533deec?q=80&w=2992&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D alt="PerroCoche" class="img-fluid" style="width: 100%; height: 300px; object-fit: cover;">
+                            </div>
+                            <div class="col p-2">
+                                <div class="ratio ratio-1x1">
+                                    <img src="https://images.unsplash.com/photo-1718787505043-670b9b691d05?q=80&w=4587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                        alt="Coches" class="img-fluid">
                                 </div>
-                                <div class="col">
-                                  <img src=https://images.unsplash.com/photo-1712609036333-dff2cbe8e417?q=80&w=2576&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D alt="Eclipse" class="img-fluid" style="width: 100%; height: 300px; object-fit: cover;">
-                                </div>      
-              
-                                <div class="container">
-                                  <div class="row mt-4">
-                                    <div class="col">
-                                      <img src=https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?q=80&w=2776&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D alt="Pug" class="img-fluid" style="width: 100%; height: 300px; object-fit: cover;">
-                                    </div>
-                                    <div class="col">
-                                      <img src=https://images.unsplash.com/photo-1695091660726-a24dfffe5147?q=80&w=4548&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dhttps://images.unsplash.com/photo-1695091660726-a24dfffe5147?q=80&w=4548&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D alt="Celebration" class="img-fluid" style="width: 100%; height: 300px; object-fit: cover;">
-                                    </div>
-                                    <div class="col">
-                                      <img src=https://images.unsplash.com/photo-1502136969935-8d8eef54d77b?q=80&w=4084&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D alt="Sillas" class="img-fluid" style="width: 100%; height: 300px; object-fit: cover;">
-                                    </div>            
+                            </div>
+                            <div class="col p-2">
+                                <div class="ratio ratio-1x1">
+                                    <img src=https://images.unsplash.com/photo-1718545817346-ee8056309909?q=80&w=4746&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+                                        alt="Globos" class="img-fluid">
                                 </div>
-                          </div>
-                        
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col p-2">
+                                <div class="ratio ratio-1x1">
+                                    <img src=https://images.unsplash.com/photo-1718807384827-bf59c4935ee1?q=80&w=4160&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+                                        alt="Faro" class="img-fluid">
+                                </div>
+                            </div>
+                            <div class="col p-2">
+                                <div class="ratio ratio-1x1">
+                                    <img src=https://images.unsplash.com/photo-1718031024945-79ad9533deec?q=80&w=2992&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+                                        alt="Perro Coche" class="img-fluid">
+                                </div>
+                            </div>
+                            <div class="col p-2">
+                                <div class="ratio ratio-1x1">
+                                    <img src=https://images.unsplash.com/photo-1712609036333-dff2cbe8e417?q=80&w=2576&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+                                        alt="Eclipse" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col p-2">
+                                <div class="ratio ratio-1x1">
+                                    <img src=https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?q=80&w=2776&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+                                        alt="Pug" class="img-fluid">
+                                </div>
+                            </div>
+                            <div class="col p-2">
+                                <div class="ratio ratio-1x1">
+                                    <img src=https://images.unsplash.com/photo-1695091660726-a24dfffe5147?q=80&w=4548&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dhttps://images.unsplash.com/photo-1695091660726-a24dfffe5147?q=80&w=4548&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+                                        alt="Celebration" class="img-fluid">
+                                </div>
+                            </div>
+                            <div class="col p-2">
+                                <div class="ratio ratio-1x1">
+                                    <img src=https://images.unsplash.com/photo-1502136969935-8d8eef54d77b?q=80&w=4084&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+                                        alt="Sillas" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
                 
+                <div class="container mt-4 mb-4 col-4 justify-content-center">
+                    
+                   
+
+                    <div id="post1" class="card mb-4">
+                        <div class="d-flex justify-content-between p-2">
+                            <span>Flamenco</span>
+                            <span>23 Junio</span>
+                        </div>
                         
-                             
-                          <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
-                            
-                          
-              
-          </div>
+                        <img src="https://images.unsplash.com/photo-1718571702272-1b0f9009d97c?q=80&w=4587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            class="card-img-top" alt="Flamenco">
+                        <div class="card-body">
+                            <p><strong>1000 likes</strong></p>
+                            <p class="card-text">El color rosado de los flamencos adultos viene determinado por su alimentación. Un flamenco bien alimentado tendrá un plumaje rosado-rojo.</p>
+                        </div>
+                    </div>
+                    <div id="post2" class="card mb-4">
+                        <div class="d-flex justify-content-between p-2">
+                            <span>Calle con coches</span>
+                            <span>24 Junio</span>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1718787505043-670b9b691d05?q=80&w=4587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            class="card-img-top" alt="Coches">
+                        <div class="card-body">
+                            <p><strong>1001 likes</strong></p>
+                            <p class="card-text">Te propongo un paseo en un coche clásico como éste, ¿te apetece?
+                            </p>
+                        </div>
+                    </div>
+                    <div id="post3" class="card mb-4">
+                        <div class="d-flex justify-content-between p-2">
+                            <span>Become One</span>
+                            <span>25 Junio</span>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1718545817346-ee8056309909?q=80&w=4746&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            class="card-img-top" alt="Globos">
+                        <div class="card-body">
+                            <p><strong>1002 likes</strong></p>
+                            <p class="card-text">Urban street art y fotos en blanco y negro. No puede haber una mejor combinación que ésta, ¿verdad?</p>
+                        </div>
+                    </div>
+                    <div id="post4" class="card mb-4">
+                        <div class="d-flex justify-content-between p-2">
+                            <span>Faro</span>
+                            <span>26 Junio</span>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1718807384827-bf59c4935ee1?q=80&w=4160&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            class="card-img-top" alt="Faro">
+                        <div class="card-body">
+                            <p><strong>1003 likes</strong></p>
+                            <p class="card-text">Urban street art y fotos en blanco y negro. No puede haber una mejor combinación que ésta, ¿verdad?</p>
+                        </div>
+                    </div>
+                    <div id="post5" class="card mb-4">
+                        <div class="d-flex justify-content-between p-2">
+                            <span>Disfrutando de la vida</span>
+                            <span>27 Junio</span>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1718031024945-79ad9533deec?q=80&w=2992&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            class="card-img-top" alt="Perro Coche">
+                        <div class="card-body">
+                            <p><strong>1003 likes</strong></p>
+                            <p class="card-text">Me sacan de paseo en coche y disfruto cuando el viento revuelve mi pelo y juega con mis orejas</p>
+                        </div>
+                    </div>
+                    <div id="post6" class="card mb-4">
+                        <div class="d-flex justify-content-between p-2">
+                            <span>Eclipse</span>
+                            <span>28 Junio</span>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1712609036333-dff2cbe8e417?q=80&w=2576&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            class="card-img-top" alt="Eclipse">
+                        <div class="card-body">
+                            <p><strong>1004 likes</strong></p>
+                            <p class="card-text">Hasta la luna y el sol coinciden y ninguno escapa al eclipse a pesar de transitar distintos cielos siempre comparten sus momentos.</p>
+                        </div>
+                    </div>
+                    <div id="post7" class="card mb-4">
+                        <div class="d-flex justify-content-between p-2">
+                            <span>Pug</span>
+                            <span>29 Junio</span>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?q=80&w=2776&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            class="card-img-top" alt="Pug">
+                        <div class="card-body">
+                            <p><strong>1005 likes</strong></p>
+                            <p class="card-text">No soy guapo pero soy un montón de gracioso.</p>
+                        </div>
+                    </div>
+                    <div id="post8" class="card mb-4">
+                        <div class="d-flex justify-content-between p-2">
+                            <span>Celebration</span>
+                            <span>30 Junio</span>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1695091660726-a24dfffe5147?q=80&w=4548&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            class="card-img-top" alt="Celebration">
+                        <div class="card-body">
+                            <p><strong>1006 likes</strong></p>
+                            <p class="card-text">Celebration es un lugar designado por el censo ubicado en el condado de Osceola en el estado estadounidense de Florida. En el Censo de 2010 tenía una población de 7427 habitantes y una densidad poblacional de 271,68 personas por km². La comunidad fue planeada por The Walt Disney Company.</p>
+                        </div>
+                    </div>
+                    <div id="post8" class="card mb-4">
+                        <div class="d-flex justify-content-between p-2">
+                            <span>Sillas voladoras</span>
+                            <span>1 Julio</span>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1502136969935-8d8eef54d77b?q=80&w=4084&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            class="card-img-top" alt="Sillas">
+                        <div class="card-body">
+                            <p><strong>1007 likes</strong></p>
+                            <p class="card-text">Todo da vueltas. Y unas veces estás arriba. Y otras abajo.</p>
+                        </div>
+                    </div>
 
-      </div>
-  </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
 
 
 
@@ -165,10 +323,9 @@
 
 
 
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
 
 </body>
 
